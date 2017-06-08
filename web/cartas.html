@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Cat�logo de Cartas N�uticas</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="assets2/js/jquery-3.1.1.min.js"></script>
+        <script src="scripts/oscar/Loader.js"></script>
+        <script src="demo.js"></script>
+        <script src="osm-marker-popup.js"></script>
+    </head>
+    <body>
+        <div id="mapSection" class="mapDiv">
+            <div id="map" class="mediumMap wrap"></div>
+        </div>
+        <div id="sidebar">
+            <div id="demoInfo">
+                <h3 id="demoTtl">Cat�logo de Cartas N�uticas</h3>
+                <p id="demoDsc">Centro de Hidrografia da Marinha</p>
+                <span id="demoTSp" style="font-style:italic">Diretoria de Hidrografia e Navega��o</span>
+            </div>
+            <div id="fields">
+                <label for="usages">Filter by Usage: </label><select id="usages"></select><br/>
+                <label for="beginDate">Beginning Year  </label><input id="beginDate" size="4" type="text"><br />
+                <label for="endDate">End Year  </label><input id="endDate" size="4" type="text"><br />
+                <input type="button" id="searchCharts" value="Search">
+            </div>
+            <div id="objInfo">
+            </div>
+        </div>
+        <div id="container"></div>
+        <script>
+            //jQuery.noConflict();
+            oscar.onReady(brazil.init);
+        </script>
+    </body>
+</html>
